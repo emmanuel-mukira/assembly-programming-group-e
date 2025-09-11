@@ -1,6 +1,9 @@
-; Assemble: nasm -f elf64 data_types.asm -o data_types.o
-; Link:     ld data_types.o -o data_types
-; Run:      ./data_types
+; Basic types
+; Assemble the program: nasm -f elf64 data_types.asm -o data_types.o
+; same as line 2        nasm -f elf64 -o data_types.o data_types.asm 
+; Link it:              ld data_types.o -o data_types
+; Run the file          ./data_types
+>>>>>>> upstream/main
 
 section .data
     ; --- Basic integer types stored in memory ---

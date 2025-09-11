@@ -6,7 +6,7 @@ Explanation:
 ● gdb my_program: Starts GDB debugging session with my_program. 
 
 
-isplays register values in a dedicated window. 
+Displays register values in a dedicated window. 
 ● Assembly Layout: (gdb) layout asm / lay asm
 ● Register Layout: (gdb) layout reg / lay reg
 

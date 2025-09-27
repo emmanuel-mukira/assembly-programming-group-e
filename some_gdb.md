@@ -10,7 +10,9 @@ Displays register values in a dedicated window.
 ● Assembly Layout: (gdb) layout asm / lay asm
 ● Register Layout: (gdb) layout reg / lay reg
 
-
+inside gdb add breakpoint : break _start
+                            run
+                        si to run line by line
 # Show in hexadecimal
 p/x $rax
 

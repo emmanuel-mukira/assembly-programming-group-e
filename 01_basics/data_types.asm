@@ -1,4 +1,4 @@
-; Basic types
+ ; Basic types
 ; Assemble the program: nasm -f elf64 data_types.asm -o data_types.o
 ; same as line 2        nasm -f elf64 -o data_types.o data_types.asm 
 ; Link it:              ld data_types.o -o data_types

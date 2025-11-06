@@ -10,6 +10,11 @@ Displays register values in a dedicated window.
 ● Assembly Layout: (gdb) layout asm / lay asm
 ● Register Layout: (gdb) layout reg / lay reg
 
+break _start
+run
+si
+
+gcc filename.c -o filename
 
 # Show in hexadecimal
 p/x $rax

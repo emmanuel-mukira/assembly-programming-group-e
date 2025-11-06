@@ -2,7 +2,7 @@
 ; params 15 = rdi , 25 = rsi
 
 section .text
-; global sum
+global sum
 
 sum:
     mov rax, 0

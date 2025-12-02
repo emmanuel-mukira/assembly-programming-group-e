@@ -1,23 +1,31 @@
+; section .text
+; 	global _start
+; _start:
+; 	mov ax ,5 	;example value
+; 	mov bx ,10	;example value
 
-section .data
-    msg db "Register to Register MOV example", 10
-    len equ $ - msg
-
+; 	;swap using a third register (cx)
+; 	mov cx , ax	; value of ax moved to cx
+; 	mov ax , bx	; value of bx moved to ax
+; 	mov bx , cx 	; value of cx (originally in ax) moved to bx
+	
+; ; Exit
+; mov rax, 60
+; xor rdi, rdi
+; syscall
 section .text
     global _start
 
 _start:
-    mov rax, rbx          ; Move contents of rbx into rax (OK)
-    mov rcx, rdx          ; Move contents of rdx into rcx
+    mov ax, 5
+    mov bx, 10
 
-    ; sys_write(stdout=1, msg, len)
-    mov rax, 1
-    mov rdi, 1
-    mov rsi, msg
-    mov rdx, len
-    syscall
+    ; XOR swap
+    xor ax, bx     ; AX = AX XOR BX
+    xor bx, ax     ; BX = BX XOR AX (BX = old AX)
+    xor ax, bx     ; AX = AX XOR BX (AX = old BX)
 
-    ; exit(0)
+    ; Exit
     mov rax, 60
     xor rdi, rdi
     syscall
